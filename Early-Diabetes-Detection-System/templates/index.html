@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Early Diabetes Detection</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align:center;
+        }
+
+        .container{
+            width:400px;
+            margin:auto;
+            margin-top:40px;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        input{
+            width:90%;
+            padding:10px;
+            margin:5px;
+        }
+
+        button{
+            padding:10px 20px;
+            background-color:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+        }
+
+        h2{
+            color:#333;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Early Diabetes Detection System</h2>
+
+    <form action="/predict" method="post">
+
+        <input type="text" name="Pregnancies" placeholder="Pregnancies" required><br>
+
+        <input type="text" name="Glucose" placeholder="Glucose" required><br>
+
+        <input type="text" name="BloodPressure" placeholder="Blood Pressure" required><br>
+
+        <input type="text" name="SkinThickness" placeholder="Skin Thickness" required><br>
+
+        <input type="text" name="Insulin" placeholder="Insulin" required><br>
+
+        <input type="text" name="BMI" placeholder="BMI" required><br>
+
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required><br>
+
+        <input type="text" name="Age" placeholder="Age" required><br><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <h2>
+        Prediction Result: {{ prediction_text }}
+    </h2>
+
+</div>
+
+</body>
+</html>
